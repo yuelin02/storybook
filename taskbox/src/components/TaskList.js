@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Task from './Task';
 
 function TaskList ({ loading, tasks, onPinTask, onArchiveTask}){
@@ -30,8 +31,21 @@ function TaskList ({ loading, tasks, onPinTask, onArchiveTask}){
     }
 
     if (tasks.length === 0) {
-        return <div className="list-items">empty</div>
+        return (
+            <div className = "list-items">
+                <div className = "wrapper-message">
+                    <span className = "icon-check" />
+                    <div className = "title-message">You have no tasks</div>
+                    <div className = "subtitle-message">Sit back and relax</div>
+                </div>
+            </div>
+        );
     }
+
+    const tasksInOrder = [
+        ...tasks.filter(t => t.state === 'TASK_PINNED'),
+        ...tasks.filter(t => t.state !== 'TASK_PINNED'),
+    ];
 
     return(
         <div className="list-items">
@@ -40,6 +54,16 @@ function TaskList ({ loading, tasks, onPinTask, onArchiveTask}){
             ))}
         </div>
     );
+}
+
+TaskList.propTypes = {
+    loading: PropTypes.bool,
+    tasks: PropTypes.arrayOf(Task.propTypes.task).isRequired,
+    onPinTask: PropTypes.func.isRequired,
+    onArchiveTask: PropTypes.func.isRequired,
+}
+TaskList.defaultProps = {
+    loading:false,
 }
 
 export default TaskList;

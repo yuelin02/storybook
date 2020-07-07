@@ -334,7 +334,7 @@
    height: 0.85em;
    transform: translate3d(-50%, -50%, 0);
    background: transparent;
-   box-shadow: #2cc5d2 0 0 0 1px inset;
+   box-shadow: #9bafda 0 0 0 1px inset;
    content: '';
    display: block;
  }
@@ -342,7 +342,7 @@
    font-size: 16px;
    line-height: 24px;
    box-shadow: none;
-   color: #2cc5d2;
+   color: #9bafda;
    margin-top: -1px;
    font-family: 'percolate';
    speak: none;
@@ -375,7 +375,7 @@
  }
  .input-symbol input:focus + [class^="icon-"],
  .input-symbol input:focus + [class*=" icon-"] {
-   color: #2cc5d2;
+   color: #9bafda;
  }
  .input-symbol [class^="icon-"],
  .input-symbol [class*=" icon-"] {
@@ -798,12 +798,12 @@
  }
  a {
    transition: all 200ms ease-in;
-   color: #5db9ff;
+   color: #6f9bbd;
    cursor: pointer;
    text-decoration: none;
  }
  a:hover {
-   color: #239da8;
+   color: #9bafda;
  }
  a:active {
    color: #555;
@@ -864,7 +864,7 @@
    color: #eee;
  }
  .list-item .actions a:hover {
-   color: #2cc5d2;
+   color: #9bafda;
  }
  .list-item .actions a:active {
    color: #555;
@@ -876,7 +876,7 @@
    text-align: center;
  }
  .list-item.TASK_PINNED .icon-star {
-   color: #2cc5d2;
+   color: #9bafda;
  }
  .list-item.TASK_ARCHIVED input[type="text"] {
    color: #aaa;
@@ -888,7 +888,7 @@
    cursor: pointer;
  }
  .list-item + .list-item {
-   border-top: 1px solid #f0f9fb;
+   border-top: 1px solid #f2f0fb;
  }
  .list-item.checked input[type="text"] {
    color: #ccc;
@@ -946,7 +946,7 @@
  .wrapper-message [class*=" icon-"] {
    font-size: 48px;
    line-height: 56px;
-   color: #2cc5d2;
+   color: #9bafda;
    display: block;
  }
  .wrapper-message .title-message {
